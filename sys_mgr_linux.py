@@ -11,7 +11,10 @@ if usech == "1":
     except FileNotFoundError:
         print("File Not Found.")
     except PermissionError:
-        print("Permission Denied.") #Why the os.remove cannot remove a dictionary?
+        print("Permission Denied.")
+    except IsADictionaryError:
+        rmcmd = "rm -rf" + str(rmfile)
+        os.system(rmcmd)
     print("Thanks for using.")
 if usech == "3":
     surech = input("Do you want to destroy system? input yes or no.")
