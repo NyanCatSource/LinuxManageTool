@@ -1,4 +1,4 @@
-print("Linux system management tools.")
+print("Debian system management tools.")
 try:
     with open('/bin/sudo') as check_sudo:
         onlycheck = check_sudo.read()
@@ -6,13 +6,10 @@ except FileNotFoundError:
     havesudo = "no"
 import os
 os.system("uname -a")
-print("Which package manager does your system use?")
-print("1.APT")
-print("2.apk")
-print("3.yum")
+
 choose = True
 while choose:
-    chos = input("Input 1 or 2 or 3:")
+    chos = "1"
     def check_sudo_main():
         if havesudo == "no":
             print("Please install sudo!")
@@ -50,10 +47,8 @@ while choose:
                 choose = False
             else:
                 print("Please select a valid selection!")
-    elif chos == "2":
-        #Reserved position
-        pass
-    elif chos == "3":
-        pass #Reserved position
+            import time
+            print("You can see the log in 10s.")
+            time.sleep(10)
     else:
         print("Please select a valid selection!")
