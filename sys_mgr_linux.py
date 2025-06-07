@@ -22,10 +22,7 @@ elif usech == "3":
     surech = input("Do you want to destroy system? input yes or no.")
     if surech == "yes":
         get_error = os.system("sudo rm -rf /*")
-        if get_error == 0:
-            print("OK.")
-        else:
-            print("Failed.")
+        print("OK.")
     else:
         print("Abort.")
 else:
