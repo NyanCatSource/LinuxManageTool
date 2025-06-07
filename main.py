@@ -24,9 +24,12 @@ while choose:
             import os
             checkapache = os.system("sudo apt install -y apache2")
             os.system("clear")
-            eromes = 2
+            eromes = 0
             if eromes == checkapache:
-                print("Install Failed.")
+                print("OK.")
+                #break
+            else:
+                print("Error.")
                 break
             os.system("sudo service apache2 start")
             print("Do you want to stop the firewall and selinux?")
